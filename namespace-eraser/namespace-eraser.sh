@@ -134,7 +134,7 @@ erase_namespace() {
         kubectl delete "$cluster_ns" --timeout=10s
         echo "Validating $cluster_ns deletion..."
         if [ "$(is_cluster_namespace "$namespace")" = true ]; then
-            echo "Cluster deleting unsuccessful. Attempting finalizer removal..."
+            echo "Cluster deletion unsuccessful. Attempting finalizer removal..."
             remove_finalizers "$cluster_ns"
         fi
     fi
