@@ -11,7 +11,7 @@
 shopt -s nocasematch
 
 
-useage="USAGE: ./kube-eraser <namespace>"
+useage="USAGE: ./namespace-eraser <namespace>"
 
 validate_namespace() {
     local namespace
